@@ -6,6 +6,12 @@ const DealerSchema = new Schema({
         required:true
     },
     stock:[{type:Schema.Types.ObjectId, ref:"item"}]
+    ,
+    details:{
+        type: Schema.Types.ObjectId, 
+        ref: 'user',
+        required: true
+    }
 });
 const DealerModel =  mongoose.model('dealer',DealerSchema);
 module.exports = DealerModel;
