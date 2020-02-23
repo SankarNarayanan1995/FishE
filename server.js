@@ -8,6 +8,8 @@ const mongoose =  require('mongoose');
 const regularRoutes =  require("./routes/Regular");
 const dealerRoutes = require("./routes/Dealer");
 const userRoutes = require("./routes/User");
+const fishRoutes = require("./routes/Fish");
+const itemRoutes = require("./routes/Item");
 mongoose.connect(dbURL,{useNewUrlParser: true,useUnifiedTopology: true }).then(
     () => {
         console.log('db is connected');
@@ -16,6 +18,8 @@ mongoose.connect(dbURL,{useNewUrlParser: true,useUnifiedTopology: true }).then(
 app.use('/regular',regularRoutes);
 app.use('/dealer',dealerRoutes);
 app.use('/user',userRoutes);
+app.use('/fish',fishRoutes);
+app.use('/item',itemRoutes);
 app.listen(3010,
     () => {
         console.log("You are connected");

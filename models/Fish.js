@@ -24,6 +24,10 @@ const FishSchema = new Schema({
     description:{
         type: String,
         default:"Not Available"
+    },
+    picture:{
+        type: Array,
+        default: []
     }
 });
 const FishModel =  mongoose.model('fish',FishSchema);

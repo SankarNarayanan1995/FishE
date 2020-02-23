@@ -5,7 +5,11 @@ const ItemSchema = new Schema({
         type: String,
         required:true
     },
-    quantity:{
+    status:{
+        type: String,
+        default:"available"
+    },
+    price:{
         type: Number,
         default:0
     },
